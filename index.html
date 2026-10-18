@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Watchlist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <img class="hero-bg" src="assets/header-bg.png" alt="">
+      <div class="hero-content">
+        <h1 id="hero-title" class="hero-title">Find your film</h1>
+        <button id="nav-link" class="nav-link" type="button">My Watchlist</button>
+      </div>
+      <form id="search-form" class="search-bar">
+        <label class="search-input-wrap">
+          <img src="assets/icons/search.svg" class="icon-search" alt="">
+          <input type="text" id="search-input" placeholder="Search for a movie title..." autocomplete="off">
+        </label>
+        <button type="submit" class="search-btn">Search</button>
+      </form>
+    </header>
+
+    <main class="main-content">
+      <section id="search-view" class="view">
+        <div id="search-results" class="movie-list"></div>
+        <p id="no-results" class="no-results hidden">Unable to find what you&rsquo;re looking for. Please try another search.</p>
+        <div id="start-exploring" class="start-exploring">
+          <img src="assets/icons/film.svg" alt="">
+          <p>Start exploring</p>
+        </div>
+      </section>
+
+      <section id="watchlist-view" class="view hidden">
+        <div id="watchlist-results" class="movie-list"></div>
+        <div id="empty-watchlist" class="empty-watchlist hidden">
+          <p class="empty-title">Your watchlist is looking a little empty&hellip;</p>
+          <button id="empty-cta" class="empty-cta" type="button">
+            <img src="assets/icons/plus-circle-empty.svg" alt="">
+            <span>Let&rsquo;s add some movies!</span>
+          </button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
